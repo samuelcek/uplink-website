@@ -42,4 +42,33 @@ footer{background:var(--ink);color:#d9ebe4;padding:2rem 0}footer a{color:#fff}
 .facts{list-style:none;padding:0;margin:1rem 0;border-left:4px solid var(--moss)}.facts li{padding:.2rem 0 .2rem 1rem}
 @media(max-width:52rem){.two,.opp{grid-template-columns:1fr}.opp img{height:12rem}}
 @media(max-width:60rem){.hero .wrap{grid-template-columns:1fr}.mark{display:none}header{position:static}.bar{flex-wrap:wrap;padding:.6rem 1.25rem}nav{order:3;margin-left:0;width:100%;overflow-x:auto;padding-bottom:.3rem}.lang{margin-left:auto}}
-@media(prefers-reduced-motion:reduce){.draw{animation:none;stroke-dashoffset:0}}
+html{scroll-behavior:smooth}
+header{background:#f8fcfcdd;backdrop-filter:saturate(1.4) blur(8px);-webkit-backdrop-filter:saturate(1.4) blur(8px)}
+nav a{transition:background .2s}
+.hero{position:relative;overflow:hidden;padding-bottom:4.5rem}
+.hero::before{content:"";position:absolute;inset:-15%;background:radial-gradient(circle at 18% 30%,#8bd0c466,transparent 38%),radial-gradient(circle at 82% 18%,#fdb12b40,transparent 34%),radial-gradient(circle at 62% 95%,#ff644426,transparent 38%);animation:drift 26s ease-in-out infinite alternate}
+#net{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity 1.6s ease}#net.on{opacity:1}
+.hero .wrap{position:relative;z-index:1}
+.mark{animation:float 7s ease-in-out infinite}
+.hero::after,.s.alt::before,.s.alt::after{content:"";position:absolute;left:0;right:0;height:30px;pointer-events:none;background-size:100% 100%;background-repeat:no-repeat}
+.hero::after,.s.alt::after{bottom:-1px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40' preserveAspectRatio='none'%3E%3Cpath fill='%23f8fcfc' d='M0 40V22C240 0 480 0 720 18S1200 40 1440 16V40Z'/%3E%3C/svg%3E")}
+.s.alt::before{top:-1px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40' preserveAspectRatio='none'%3E%3Cpath fill='%23f8fcfc' d='M0 0V22C240 0 480 0 720 18S1200 40 1440 16V0Z'/%3E%3C/svg%3E")}
+.s.alt{position:relative;padding:3.6rem 0}
+.cols>div{background:#fff;padding:1.3rem 1.4rem;border-radius:0 14px 14px 0;box-shadow:0 2px 14px #0a255912;transition:transform .25s,box-shadow .25s}
+.cols>div:hover,.opp:hover{transform:translateY(-4px);box-shadow:0 10px 26px #0a255920}
+.opp{box-shadow:0 2px 14px #0a255912;transition:transform .25s,box-shadow .25s}
+.opp>div:first-child{overflow:hidden;border-radius:8px}.opp img{transition:transform .5s}.opp:hover img{transform:scale(1.05)}
+.btn{transition:transform .2s,box-shadow .2s,background .2s}.btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px #0a255933}.btn:active{transform:none}
+.soc-s{background:linear-gradient(120deg,#0a2559,#037c82);color:#fff;text-align:center;position:relative;overflow:hidden;padding:2.6rem 0}
+.soc-s::before,.soc-s::after{content:"";position:absolute;border-radius:50%;opacity:.3}
+.soc-s::before{width:14rem;height:14rem;background:#fdb12b;left:-4rem;top:-7rem}.soc-s::after{width:11rem;height:11rem;background:#ff6444;right:-3rem;bottom:-6rem}
+.soc-s .wrap{position:relative;z-index:1}.soc-s h2{margin-top:0;font-size:1.7rem}.soc-s p{max-width:38rem;margin:.4rem auto}
+.btn.ig,.btn.fb{display:inline-flex;align-items:center;gap:.55rem;margin:.3rem}
+.btn.ig{background:linear-gradient(45deg,#fdb12b,#ff6444);color:#0a2559}.btn.fb{background:#fff;color:#0a2559}
+.soc b{display:block;margin-bottom:.5rem}.soclinks,.socrow{display:flex;gap:.6rem;align-items:center}
+.ic{display:inline-flex;width:2.6rem;height:2.6rem;border-radius:50%;align-items:center;justify-content:center;background:#ffffff22;color:#fff;text-decoration:none;transition:background .2s,transform .2s,color .2s}
+.ic:hover{background:var(--sun);color:var(--ink);transform:translateY(-2px)}.ic.dk{background:var(--mist);color:var(--ink)}.ic.dk:hover{background:var(--sun)}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+html.js .rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}html.js .rv.in{opacity:1;transform:none}
+@keyframes drift{to{transform:translate3d(3%,2%,0) scale(1.06)}}@keyframes float{50%{transform:translateY(-10px)}}
+@media(prefers-reduced-motion:reduce){.draw,.hero::before,.mark{animation:none}.draw{stroke-dashoffset:0}html{scroll-behavior:auto}.btn,.cols>div,.opp,.ic{transition:none}}
