@@ -72,3 +72,9 @@ nav a{transition:background .2s}
 html.js .rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}html.js .rv.in{opacity:1;transform:none}
 @keyframes drift{to{transform:translate3d(3%,2%,0) scale(1.06)}}@keyframes float{50%{transform:translateY(-10px)}}
 @media(prefers-reduced-motion:reduce){.draw,.hero::before,.mark{animation:none}.draw{stroke-dashoffset:0}html{scroll-behavior:auto}.btn,.cols>div,.opp,.ic{transition:none}}
+
+.opp.closed,.opp.closed:hover{border-left-color:#aab8b8;background:#f1f5f5;box-shadow:none;transform:none}.opp.closed img{filter:grayscale(1);opacity:.6}.opp.closed h3,.opp.closed p{color:#4d5d5d}
+.opp.closed .btn{background:#d5dede;color:#3d4f4f}.opp.closed .btn:hover{box-shadow:none}
+.badge,.closedbar{display:inline-block;padding:.2rem .8rem;border-radius:99px;background:#4d5d5d;color:#fff;font-size:.85rem;font-weight:600;margin:0 0 .5rem}.closedbar{font-size:1rem;padding:.45rem 1.1rem;margin:.4rem 0}
+.two .poster{filter:grayscale(1);opacity:.75}
+.opp.closed .badge{color:#fff}
